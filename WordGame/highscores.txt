@@ -1,0 +1,10 @@
+samuel,13
+frankie,9
+gorg,6
+frank,5
+peppi,4
+fredu,4
+alfred,3
+annie,3
+graziella,2
+john,2
