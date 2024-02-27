@@ -1,4 +1,4 @@
 # WordGame
 
-This is a word i created 
-You need to open the main file to play Goodluck!
+This is the WordGame i created, To open, click on WordGame.py
+Enjoy!
