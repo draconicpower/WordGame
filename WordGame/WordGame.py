@@ -1,3 +1,4 @@
+import os
 import random
 # Program Chosen is Word Builder
 # Program Chosen is Word Builder
@@ -169,16 +170,21 @@ def startWordBuilderGame(wordList):
 
         if word in guessedwords:
             # Ignore duplicate entries
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("You already guessed that word. Try again.")
+            print(f"Current Score: {wordsCorr}")
+            print(f"Letters for the game: {random_word}")
             continue
 
         if isValidWord(word, random_word, wordList):
+            os.system('cls' if os.name == 'nt' else 'clear')
             print(f"Valid word! Keep going.")
             wordsCorr += 1
             print(f"Current Score: {wordsCorr}")
             print(f"Letters for the game: {random_word}")
             guessedwords.add(word.lower())  # Add the word to the set of guessed words and lower cases it
         else:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print(f"Invalid word. Try again.")
             print(f"Letters for the game: {random_word}")
 
@@ -340,6 +346,7 @@ def displayHighScores():
                 print("=== High Scores ===")
                 for i, (player, score) in enumerate(high_scores, start=1):
                     print(f"{i}. {player}: {score}")
+                print(" ")
     except FileNotFoundError:
         print("No high scores available.")
 
